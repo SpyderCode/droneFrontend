@@ -6,5 +6,5 @@ export default defineConfig({
   plugins: [react()],
 
   //http://localhost/productos
-  base: '/productos',
+  //base: '/productos',
 })
