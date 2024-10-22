@@ -84,6 +84,19 @@ function RegisterPage() {
             errors.password?.type === 'required' && <p className="text-red-500">This field is required</p>
           }
           </div>
+
+          <label className="text-2xl text-white">Role</label>
+          <select
+            {...register("role", { required: true })}
+            className="w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2"
+          >
+            <option value="">Select Role</option>
+            <option value="operator">Operator</option>
+            <option value="analyst">Analyst</option>
+            {/* Add more roles as needed */}
+          </select>
+          {errors.role && <p className="text-red-500">Please select a role</p>}
+
           <button type="Submit" className="bg-transparent hover:bg-zinc-500 text-white 
                         font-semibold hover:text-white py-2 px-4 border border-zinc-400 
                         border-transparent rounded"
